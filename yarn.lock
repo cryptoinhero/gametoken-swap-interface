@@ -2122,9 +2122,9 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap-libs/uikit@^0.20.0":
+"@gametoken/uikit@^0.20.0":
   version "0.20.0"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/uikit/-/uikit-0.20.0.tgz#778b7849039255ee16904ef552ce9c9994e7d89d"
+  resolved "https://registry.yarnpkg.com/@gametoken/uikit/-/uikit-0.20.0.tgz#778b7849039255ee16904ef552ce9c9994e7d89d"
   integrity sha512-erxEY3rm7O9oCERgS0yUgipCHH64D0vCH+ea+sVWtQc2o9tDQZ+U6MtLMqBqBmtLwEtWPAQhqL9DPwApTDaTCg==
   dependencies:
     lodash "^4.17.20"
