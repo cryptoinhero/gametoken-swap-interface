@@ -13,7 +13,7 @@
     {
       "name": "GameToken",
       "symbol": "GME",
-      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095d",
+      "address": "0x171BB6a358B7E769B1eB3E7b2Aab779423CBeee0",
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://gametokenfi.netlify.app/images/tokens/GME.png"
