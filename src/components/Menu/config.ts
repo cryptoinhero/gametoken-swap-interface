@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'http://app.kizunacoin.net',
+    href: 'http://abc.kizunacoin.net',
   },
   {
     label: 'Trade',
@@ -23,12 +23,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farming',
     icon: 'FarmIcon',
-    href: 'http://app.kizunacoin.net/farms',
+    href: 'http://abc.kizunacoin.net',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'http://app.kizunacoin.net/pools',
+    href: 'http://abc.kizunacoin.net/pools',
   },
   {
     label: 'GameMarket',
