@@ -31,17 +31,17 @@ const useGetPriceData = () => {
         const res: ApiResponse = await response.json()
 
         if(multicallContract){
-          const {gmeAddress, bnbAddress, lpAddress} = priceContracts;
+          const {gmeAddress, busdAddress, lpAddress} = priceContracts;
           const calls = [
             [gmeAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
-            [bnbAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+            [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
           ];
 
           const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
-          const [gmeAmount, bnbAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
+          const [gmeAmount, busdAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
           const gme = new BigNumber(gmeAmount);
-          const wbnb = new BigNumber(bnbAmount);
-          const gmePrice = wbnb.div(gme).toString();           
+          const busd = new BigNumber(busdAmount);
+          const gmePrice = busd.div(gme).toString();
 
           res.prices.GME = gmePrice;
         }
