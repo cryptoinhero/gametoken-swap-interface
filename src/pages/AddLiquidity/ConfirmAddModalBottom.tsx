@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@pancakeswap-libs/sdk'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@gametoken/apeswap-sdk'
 import React from 'react'
 import { Button, Text } from '@gametoken/uikit'
 import { TranslateString } from 'utils/translateTextHelpers'

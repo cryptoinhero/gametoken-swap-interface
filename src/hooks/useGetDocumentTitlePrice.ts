@@ -1,13 +1,12 @@
 import { useEffect } from 'react'
-import useGetPriceData from './useGetPriceData'
+import useGetPriceData, { useGetPriceDataFromLP } from './useGetPriceData'
 
 const useGetDocumentTitlePrice = () => {
-  const priceData = useGetPriceData()
+  // const priceData = useGetPriceData()
+  // const cakePriceUsd = priceData ? parseFloat(priceData.prices.GME) : 0
+  const cakePriceUsd = useGetPriceDataFromLP()
 
-  const cakePriceUsd = priceData ? parseFloat(priceData.prices.GME) : 0
-
-  const cakePriceUsdString =
-    Number.isNaN(cakePriceUsd) || cakePriceUsd === 0
+  const cakePriceUsdString = !cakePriceUsd
       ? ''
       : ` - $${cakePriceUsd.toLocaleString(undefined, {
           minimumFractionDigits: 3,

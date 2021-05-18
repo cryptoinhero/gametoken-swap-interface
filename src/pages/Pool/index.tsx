@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Pair } from '@pancakeswap-libs/sdk'
+import { Pair } from '@gametoken/apeswap-sdk'
 import { Button, CardBody, Text } from '@gametoken/uikit'
 import { Link } from 'react-router-dom'
 import CardNav from 'components/CardNav'
@@ -46,7 +46,7 @@ export default function Pool() {
         v2PairsBalances[liquidityToken.address]?.greaterThan('0')
       ),
     [tokenPairsWithLiquidityTokens, v2PairsBalances]
-  )
+)
 
   const v2Pairs = usePairs(liquidityTokensWithBalances.map(({ tokens }) => tokens))
   const v2IsLoading =
