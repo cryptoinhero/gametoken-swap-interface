@@ -66,10 +66,10 @@ export const useGetPriceDataFromLP = () => {
   if (response.loading === false) {
     const result = response.result;
     if (result) {
-      const aitReserve = new BigNumber(result[0]._hex)
+      const gmeReserve = new BigNumber(result[0]._hex)
       const busdReserve = new BigNumber(result[1]._hex)
-      const aitUsd = busdReserve.div(aitReserve)
-      return aitUsd.toNumber()
+      const gmePriceUsd = busdReserve.div(gmeReserve)
+      return gmePriceUsd.toNumber()
     }
   }
 
